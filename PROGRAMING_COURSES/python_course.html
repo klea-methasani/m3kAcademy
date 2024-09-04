@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="python_course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /> 
+
+    <title>Python-Course</title>
+</head>
+<body>
+    <!-- Navigation bar start -->
+    <div class="nav-bar">
+        <img src="../IMAGES/logo.jpeg" style="width: 100px; height: auto;">
+        <ul class="nav-items">
+            <li><a href="../HOMEPAGE/homepage.html">Home</a></li>
+      <li><a href="../Courses/courses.html">Calendar</a></li>
+      <li><a href="../PROFESSOR_CV/professors.html">Instructors</a></li>
+      <li><a href="../CONTACT_US/contact_us.html">ContactUs</a></li>
+      <li><a href="../ABOUT_US/about_us.html">AboutUs</a></li>
+      <li><a href="../Newspaper/newspaper.html">Our Newspaper</a></li>
+        </ul>
+        <div class="register">
+            <a href="../LOGIN_SIGNUP/loginSignup.html"><button class="login">Login</button></a>
+            <a href="../LOGIN_SIGNUP/loginSignup.html"><button class="getStarted">Get Started</button></a>
+        </div>
+    </div>
+    <!-- Navigation bar end -->
+
+    <!-- Content section start -->
+    <div class="scroll-animation">
+    <div class="container">
+        <div class="intro">
+            <div class="intro-left">
+                <img src="../IMAGES/python.jpeg" style="width: 250px; height: auto;" id="intro-image">
+                <h1>PYTHON: <br><br>Essential for Modern<br> Web Development</h1>
+                
+                <h3>Master the Language Behind Dynamic Websites and Interactive Web Applications with professor Klaudia</h3>
+            </div>
+            <div class="intro-right">
+                
+                <p>Python is a user-friendly, versatile programming language known for its 
+                    readability and extensive library support. With its simple syntax and 
+                    dynamic typing, Python is widely used across various fields, including web 
+                    development, data science, and automation. Its large community and rich ecosystem 
+                    of libraries make it a popular choice for both beginners and experienced developers alike. 
+                </p>
+               
+            </div>
+        </div>
+        
+        <!-- Curriculum section start -->
+        <div class="curriculum">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div>
+                <button class="prevBtn justABtn" onclick="prevStep()">Previous Step</button>
+                <button class="nextBtn justABtn" onclick="nextStep()">Next Step</button>
+            </div>
+            <div id="info">What will I learn through the months?</div>
+        </div>
+        <!-- Curriculum section end -->
+    </div>
+</div>
+    <!-- Content section end -->
+
+    <!-- JavaScript for curriculum progress -->
+    <script>
+        const progress = document.querySelector('.progress');
+        const infoDiv = document.getElementById('info');
+        let currentStep = 0;
+        const totalSteps = 7; // Change this to the total number of steps
+
+        // Array containing information for each step
+        const stepInformation = [
+            "Month 1: Introduction to Python <br>- Week 1: Basic syntax and data types <br> - Week 2: Control flow (if statements, loops) <br>- Week 3: Functions <br>- Week 4: Arrays and objects",
+            "Month 2: Intermediate JavaScript <br>- Week 1: DOM manipulation and events  <br>- Week 2: Error handling and debugging  <br>- Week 3: ES6 features (arrow functions, let/const, template literals)  <br>- Week 4: Asynchronous JavaScript (callbacks, promises)",
+            "Month 3: Frontend Development <br>- Week 1: Introduction to HTML and CSS <br>- Week 2: Responsive design and Flexbox/Grid <br>- Week 3: Introduction to Bootstrap or another CSS framework <br>- Week 4: Building a simple website or web app",
+            "Month 4: Advanced Python <br> - Week 1: Object-oriented programming (classes, inheritance)<br>- Week 2: Functional programming concepts <br>- Week 3: Introduction to Node.js <br>- Week 4: npm and package management",
+            "Month 5: Backend Development <br>- Week 1: Setting up a Node.js server<br>- Week 2: Express.js framework<br>- Week 3: Database integration (MongoDB or SQL) <br>- Week 4: Authentication and authorization",
+            "Month 6: Full-Stack Development <br>- Week 1: Connecting frontend and backend (RESTful APIs)<br>- Week 2: AJAX and Fetch API<br>- Week 3: Deployment strategies (Heroku, Netlify, etc.)<br>- Week 4: Continuous integration and deployment (CI/CD)",
+            "Month 7: Advanced Topics and Project <br>- Week 1: Advanced Node.js concepts (streams, event emitters)<br>- Week 2: WebSockets and real-time communication<br>- Week 3: Introduction to popular frameworks (React, Angular, Vue)<br>- Week 4: Final project: Build a full-stack web application from scratch"
+        ];
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                const percent = (currentStep / totalSteps) * 100;
+                setProgress(percent);
+                showInformation(currentStep);
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                const percent = (currentStep / totalSteps) * 100;
+                setProgress(percent);
+                showInformation(currentStep);
+            }
+        }
+
+        function setProgress(percent) {
+            progress.style.width = percent + '%';
+        }
+
+        function showInformation(step) {
+            infoDiv.innerHTML = stepInformation[step - 1];
+        }
+    </script>
+    <!-- JavaScript end -->
+
+
+     <!-- footer start -->
+   <div class="footer">
+    <div class="footer-text">
+        <div class="footer-name">
+            <h1>M3K <i class="fa-solid fa-landmark"></i><br>Academy</h1>
+        </div>
+        <div class="footer-info">
+            <p>+355 68 422 0505</p>
+            <p>m3kacademy@gmail.com</p>
+            <p>Rruga Dibres , Tirana , Albania</p><br>
+            <p>Registration No: MX2C4NF</p>
+            
+        </div>
+        <div class="text-rights">@All Rights Reserved</div>
+    </div>
+</div>
+<!-- footer end -->
+
+</body>
+</html>

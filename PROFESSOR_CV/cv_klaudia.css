@@ -1,0 +1,269 @@
+:root {
+    --light-blue: #eff2f3;
+    --main-blue: #7bc0c6;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+   
+   background-image: linear-gradient(45deg, #e6eef0 0% ,#ced6f3 100%);
+    color: black;
+}
+
+
+/* navigation bar start */
+.nav-bar {
+    display: flex;
+    background-color: var(--light-blue);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+ .nav-bar .nav-items {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0 130px 0 50px;
+    color: black;
+}
+
+ .nav-bar .nav-items li {
+    display: inline-flex;
+    padding: 25px 20px;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: black !important;
+}
+
+ .nav-bar .register {
+    float: right;
+    margin: auto 20px auto 150px;
+    padding: 0;
+
+}
+
+ .nav-bar .register .login,
+ .nav-bar .register .getStarted {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+ .nav-bar .register .login:hover {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+ .nav-bar .register .getStarted {
+    background-color: #7bc0c6;
+    color: white;
+}
+
+ .nav-bar .register .getStarted:hover {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+    transition-duration: 0.4s;
+}
+
+/* navigation bar end */
+.container .header {
+    display: flex;
+    background-image: url(../IMAGES/logo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x:right;
+    height: 100vh;
+    /* width: 30%; */
+}
+
+.container .header h1,
+.container .header p {
+    float: left;
+    width: 500px;
+    margin-left: 170px;
+
+}
+
+.container .header p {
+    font-size: 1.2rem;
+    margin-top: 170px;
+}
+.container .header .name{
+    color: rgb(2, 82, 187);
+}
+/* header ends */
+
+
+/* about starts */
+
+.about{
+    padding: 80px 80px !important;
+    margin:50px 0;
+    display: flex;
+    height: 100vh;
+    margin-bottom: 100px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .about .row .about-col-2 .sub-title{
+    margin-bottom: 20px;
+}
+.about .about-col-1{
+    flex-basis: 40%;
+    float: right;
+    background-image: url(../IMAGES/KLAUDIA.jpeg);
+    background-size:300px 550px !important;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+.about-col-1 img{
+width: 100%;
+border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+
+}
+.tab-title{
+    display: flex;
+    margin: 20px 0 40px ;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(2, 82, 187);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li .cName{
+    color: rgb(2, 82, 187);
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block !important;
+}
+
+/* about ends */
+
+
+ /* contact me starts  */
+.contact{
+    background-color: var(--light-blue);
+   padding: 50px;
+   
+}
+ .contact-left{
+    flex-basis: 30%;
+    margin-left: 60px;
+ }
+ .contact-right{
+    flex-basis: 60%;
+ }
+ .contact-left p{
+    margin-top: 30px;
+    
+ }
+ .contact-right .btn{
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+ }
+ .contact-right .btn:hover{
+    border: 1px solid white;
+    background-color:rgb(3, 20, 33);
+    color: white;
+    transition: 0.4s;
+    font-size: 1.1rem;
+ }
+ .contact-right form{
+    width: 100%;
+ }
+ form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-origin: rgb(234, 239, 243);
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow:gray;
+
+ }
+ /* contact me ends  */
+
+ /* footer start */
+.footer {
+   
+
+    background-color: rgb(3, 20, 33);
+    color: rgb(217, 232, 237);
+    display: flex;
+    height: 150px;
+}
+.footer .footer-text{
+    width: 100%;
+    border-left: 1px solid rgb(66, 169, 220);
+    margin: 0;
+}
+.footer .footer-name {
+    height: 150px;
+    float: left;
+    flex-wrap: wrap;
+    margin: 0px 70px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.footer .footer-text .footer-info {
+    margin: 40px 0 50px 30px;
+    display: inline-flex;
+}
+.footer .footer-info p{
+    margin-right: 70px;
+}
+.footer .text-rights{
+    text-align: center;
+}
+/* footer end */
